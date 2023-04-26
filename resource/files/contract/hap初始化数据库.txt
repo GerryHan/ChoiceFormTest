@@ -1,0 +1,1 @@
+mvn process-resources -D skipLiquibaseRun=false -D db.driver=com.mysql.jdbc.Driver -D db.url=jdbc:mysql://127.0.0.1:3306/hap_dev -Ddb.user=hap_dev -Ddb.password=hap_dev

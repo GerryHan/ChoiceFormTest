@@ -1,0 +1,32 @@
+配置新环境需要配置一下几块（环境变量，域名，场景账号密码，redis账号和密码，sap账号和密码，套件级参数配置）
+1.环境变量配置（具体参数，参照test环境配置即可）
+   --config
+        --globals
+            baseinfo.py
+                配置 elif env == "环境变量": （例如”test“环境配置为：”elif env == "test":“）
+
+2.域名配置：（具体参数，参照test环境配置即可）
+   --config
+        --globals
+            baseinfo.py
+                在配置的环境变量下，以次配置域名，场景账号和密码，redis账号和密码，sap账号和密码
+
+
+3.套件级参数配置（具体参数，参照test环境配置即可）
+   --config
+        --globals
+            --shoppingMall   (商城套件)
+                shoppingMallComm.py
+            --sourceSeeking  (寻源套件)
+                sourceComm.py
+            --coordination   (协同套件)
+                coorComm.py
+                配置 elif env == "环境变量": （例如”test“环境配置为：”elif env == "test":“）
+                在配置的环境变量下，以次配置需要的参数， （具体参数，参照test环境配置即可）
+                具体参数来源需要在对应环境的界面上配置后产生(文档后期补上).
+
+4.配置完成后，运行该新环境
+   --config
+        --globals
+            environment.py
+                修改 env = "环境变量"即可运行 （例如：env = "test"）

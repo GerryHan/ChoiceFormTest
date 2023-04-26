@@ -1,0 +1,15 @@
+git branch test;
+git checkout test
+git checkout master
+git branch -b test2
+git merge test2
+git branch -d test2
+git checkout test
+
+
+git init
+git add .
+git commit -m""     记录提交轨迹，可进行文件恢复，将文件暂存本地
+git remote add origin https:""
+git pull origin master
+git push origin master
